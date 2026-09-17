@@ -1,0 +1,76 @@
+/* Page-specific additions for the Bali creators landing page.
+   Everything else (nav, buttons, sections, manifest, path, stack, footer)
+   comes straight from styles.css so this page stays visually identical
+   to the main site. */
+
+/* The homepage reveals .manifest-row on scroll via IntersectionObserver.
+   An ad landing page can't risk content staying invisible if that never
+   fires, so show it immediately instead of depending on the reveal. */
+.manifest-row {
+  opacity: 1;
+  transform: none;
+}
+
+.dm-board-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 6px 0;
+}
+
+.dm-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(239, 241, 236, 0.1);
+}
+
+.dm-row:last-child {
+  border-bottom: none;
+}
+
+.dm-handle {
+  grid-column: 1;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--paper);
+}
+
+.dm-msg {
+  grid-column: 1;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: rgba(239, 241, 236, 0.55);
+  margin-top: 2px;
+}
+
+.dm-tag {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.dm-tag-wait {
+  background: rgba(239, 241, 236, 0.1);
+  color: rgba(239, 241, 236, 0.55);
+}
+
+.dm-tag-lost {
+  background: rgba(192, 80, 30, 0.16);
+  color: #e08258;
+}
+
+.dm-tag-caught {
+  background: rgba(95, 191, 154, 0.16);
+  color: #5fbf9a;
+}
