@@ -18,12 +18,22 @@ document.querySelectorAll(".nav-mobile a").forEach((link) => {
 });
 
 // Dispatch board — signature animation, mirrors the Routing Path section
-const dispatchLines = [
-  { t: "14:02:08", label: "LEAD RECEIVED", d: "Instagram DM" },
-  { t: "14:02:11", label: "ROUTED → CRM", d: "tagged · deduplicated" },
-  { t: "14:02:14", label: "AI REPLY SENT", d: "qualifying questions" },
-  { t: "14:04:52", label: "SLOT BOOKED ✓", d: "Tue 14:00 confirmed" },
-];
+const dispatchLinesByLang = {
+  en: [
+    { t: "14:02:08", label: "LEAD RECEIVED", d: "Instagram DM" },
+    { t: "14:02:11", label: "ROUTED → CRM", d: "tagged · deduplicated" },
+    { t: "14:02:14", label: "AI REPLY SENT", d: "qualifying questions" },
+    { t: "14:04:52", label: "SLOT BOOKED ✓", d: "Tue 14:00 confirmed" },
+  ],
+  de: [
+    { t: "14:02:08", label: "LEAD EINGEGANGEN", d: "Instagram-DM" },
+    { t: "14:02:11", label: "WEITERGELEITET → CRM", d: "getaggt · dedupliziert" },
+    { t: "14:02:14", label: "KI-ANTWORT GESENDET", d: "Qualifizierungsfragen" },
+    { t: "14:04:52", label: "TERMIN GEBUCHT ✓", d: "Di. 14:00 bestätigt" },
+  ],
+};
+const LANG = document.documentElement.lang === "de" ? "de" : "en";
+const dispatchLines = dispatchLinesByLang[LANG];
 
 const board = document.getElementById("dispatchBoard");
 

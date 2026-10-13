@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lars Timmermann — Dispatch-Protokoll</title>
+    <meta
+      name="description"
+      content="Jede langsame Antwort ist ein Kunde, der bei jemand anderem bucht. Ich baue die Systeme, die jeden Lead auffangen, qualifizieren und nachfassen — damit langsame Reaktion dich nie wieder einen Verkauf kostet."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='10' fill='%231F5C4C'/%3E%3Ctext x='50' y='68' font-family='monospace' font-weight='700' font-size='48' fill='%23EFF1EC' text-anchor='middle'%3ELT%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="alternate" hreflang="de" href="https://larsomatic.org/de/" />
+    <link rel="alternate" hreflang="en" href="https://larsomatic.org/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://larsomatic.org/" />
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#top" class="nav-brand">
+          <img
+            src="../assets/larsomatic-logo.png"
+            alt="Larsomatic"
+            class="nav-logo"
+            width="640"
+            height="182"
+          />
+        </a>
+        <nav class="nav-links" aria-label="Hauptnavigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#stack">Stack</a>
+          <a href="#ergebnisse">Ergebnisse</a>
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+        <div class="nav-cta-group">
+          <div class="lang-switch" role="group" aria-label="Language"><a href="/de/" hreflang="de" lang="de" class="active" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="/en/" hreflang="en" lang="en" title="English">EN</a></div>
+          
+          
+          
+          
+          <a
+            href="https://cal.com/lars-timmermann-lt00/free-intro-call"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-calendly nav-cta"
+            >Gespräch buchen</a
+          >
+          <a
+            href="https://wa.me/4915679771598"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary nav-cta"
+            >WhatsApp schreiben</a
+          >
+        </div>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Menü umschalten"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" id="navMobile">
+        <div class="lang-switch" role="group" aria-label="Language"><a href="/de/" hreflang="de" lang="de" class="active" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="/en/" hreflang="en" lang="en" title="English">EN</a></div>
+        
+        
+        
+        
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#stack">Stack</a>
+        <a href="#ergebnisse">Ergebnisse</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
+        <a
+          href="https://cal.com/lars-timmermann-lt00/free-intro-call"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-calendly"
+          >Gespräch buchen</a
+        >
+        <a
+          href="https://wa.me/4915679771598"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+          >WhatsApp schreiben</a
+        >
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Freelance KI-Automatisierung</p>
+            <h1>Nichts bleibt<br />unbeantwortet.</h1>
+            <p class="hero-sub">
+              Jeder Lead, den du nicht rechtzeitig beantwortest, bucht bei jemand anderem. Ich baue die Systeme, die jeden einzelnen auffangen, qualifizieren und nachfassen — damit langsame Antworten dich nie wieder einen Kunden kosten.
+            </p>
+            <div class="hero-actions">
+              <a
+                href="https://wa.me/4915679771598"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary btn-lg"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.004c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.003a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.25 8.21zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.08 0 1.23.9 2.42 1.02 2.58.12.17 1.76 2.69 4.27 3.77.6.26 1.06.41 1.43.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"
+                  />
+                </svg>
+                WhatsApp schreiben
+              </a>
+              <a
+                href="mailto:lars.timmermann.ai@gmail.com"
+                class="btn btn-ghost btn-lg"
+                >E-Mail schreiben</a
+              >
+            </div>
+            <p class="hero-trust">
+              Operativer Hintergrund bei <strong>Amazon</strong> ·
+              <strong>PwC</strong> · <strong>KPMG</strong> ·
+              <strong>AI Union</strong> · <strong>SalesFrank</strong> — heute selbstständig.
+            </p>
+          </div>
+
+          <div class="hero-board-wrap">
+            <div class="board">
+              <div class="board-head">
+                <span class="board-dot"></span>
+                <span>LIVE-DISPATCH-PROTOKOLL</span>
+              </div>
+              <div class="board-body" id="dispatchBoard">
+                <!-- lines injected by script.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="section" id="problem">
+        <div class="container">
+          <p class="eyebrow">Ohne System</p>
+          <h2 class="section-title">So sehen die meisten Postfächer aus.</h2>
+
+          <div class="tickets">
+            <div class="ticket ticket-1">
+              <span class="ticket-time">09:14</span> WhatsApp
+              <span class="ticket-status">keine Antwort</span>
+            </div>
+            <div class="ticket ticket-2">
+              <span class="ticket-time">09:31</span> Instagram-DM
+              <span class="ticket-status">keine Antwort</span>
+            </div>
+            <div class="ticket ticket-3">
+              <span class="ticket-time">11:02</span> Verpasster Anruf
+              <span class="ticket-status">keine Antwort</span>
+            </div>
+            <div class="ticket ticket-4">
+              <span class="ticket-time">13:47</span> Website-Formular
+              <span class="ticket-status">keine Antwort</span>
+            </div>
+            <div class="ticket ticket-5">
+              <span class="ticket-time">15:20</span> WhatsApp
+              <span class="ticket-status">keine Antwort</span>
+            </div>
+          </div>
+
+          <div class="grid grid-4 problem-grid">
+            <div class="problem-item">
+              <h3>Leads stapeln sich</h3>
+              <p>
+                DMs, WhatsApp, Anrufe, Webformulare — Leads kommen überall gleichzeitig an, und niemand fühlt sich für das Postfach zuständig.
+              </p>
+            </div>
+            <div class="problem-item">
+              <h3>Kein strukturiertes Nachfassen</h3>
+              <p>
+                Ohne echten CRM-Funnel bekommt ein Lead eine Antwort, dann Stille. In dieser Lücke sterben die meisten Deals unbemerkt.
+              </p>
+            </div>
+            <div class="problem-item">
+              <h3>Überlastete Teams</h3>
+              <p>
+                Ich habe Teams gesehen, die drei Handys jonglieren, nur um mit eingehenden Nachrichten Schritt zu halten — üblich in schnell wachsenden Märkten wie Bali.
+              </p>
+            </div>
+            <div class="problem-item">
+              <h3>Langsame Antwort, verlorener Deal</h3>
+              <p>
+                Wer zuerst antwortet, gewinnt meist den Kunden. Manuelle Reaktionszeiten können gegen eine sofortige KI-Antwort nicht bestehen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES / MANIFEST -->
+      <section class="section section-raised" id="leistungen">
+        <div class="container">
+          <p class="eyebrow">Manifest</p>
+          <h2 class="section-title">Was ich baue</h2>
+          <p class="section-sub">
+            Vier Systeme. Jedes funktioniert allein — zusammen führen sie einen Lead vom ersten Kontakt zum gebuchten Kunden. Wähle eine Zeile für den ganzen Ablauf.
+          </p>
+
+          <div class="manifest">
+            <button
+              type="button"
+              class="manifest-row manifest-row-flagged"
+              data-modal="modal-lead"
+            >
+              <span class="manifest-code">ROUTING</span>
+              <span class="manifest-title"
+                >Lead-Management &amp; CRM-Funnels</span
+              >
+              <span class="manifest-desc"
+                >Jeder Lead wird erfasst, getaggt und automatisch nachverfolgt.</span
+              >
+              <span class="manifest-flag">★ Am häufigsten gebucht</span>
+              <span class="manifest-arrow">→</span>
+            </button>
+            <button type="button" class="manifest-row" data-modal="modal-chat">
+              <span class="manifest-code">EINGANG</span>
+              <span class="manifest-title">Chat-Automatisierung</span>
+              <span class="manifest-desc"
+                >KI-Antworten auf WhatsApp, Instagram &amp; deiner Website — sofort, rund um die Uhr.</span
+              >
+              <span class="manifest-arrow">→</span>
+            </button>
+            <button type="button" class="manifest-row" data-modal="modal-voice">
+              <span class="manifest-code">VOICE</span>
+              <span class="manifest-title"
+                >Voice AI — eingehend &amp; ausgehend</span
+              >
+              <span class="manifest-desc"
+                >Anrufe, die annehmen, qualifizieren, buchen und erinnern — in jeder Größenordnung.</span
+              >
+              <span class="manifest-arrow">→</span>
+            </button>
+            <button
+              type="button"
+              class="manifest-row"
+              data-modal="modal-website"
+            >
+              <span class="manifest-code">BUILD</span>
+              <span class="manifest-title">Website-Erstellung</span>
+              <span class="manifest-desc"
+                >Schnelle, professionelle Websites in Tagen statt Monaten.</span
+              >
+              <span class="manifest-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS / ROUTING PATH -->
+      <section class="section" id="ablauf">
+        <div class="container">
+          <p class="eyebrow">Routing-Pfad</p>
+          <h2 class="section-title">Ein Lead, von Anfang bis Ende</h2>
+          <p class="section-sub">
+            Dieselben vier Zeitstempel aus dem Dispatch-Protokoll oben — das passiert bei jedem einzelnen tatsächlich.
+          </p>
+
+          <div class="path" id="routingPath">
+            <div class="path-packet" aria-hidden="true"></div>
+            <div class="path-stop">
+              <div class="path-time">14:02:08</div>
+              <div class="path-num">1</div>
+              <h3>Lead eingegangen</h3>
+              <p>Über Meta Ads, deine Website oder eine Direktnachricht.</p>
+            </div>
+            <div class="path-stop">
+              <div class="path-time">14:02:11</div>
+              <div class="path-num">2</div>
+              <h3>An CRM weitergeleitet</h3>
+              <p>Automatisch angelegt und getaggt — keine manuelle Eingabe.</p>
+            </div>
+            <div class="path-stop">
+              <div class="path-time">14:02:14</div>
+              <div class="path-num">3</div>
+              <h3>KI-Antwort gesendet</h3>
+              <p>Qualifiziert den Lead in Echtzeit, Tag und Nacht.</p>
+            </div>
+            <div class="path-stop">
+              <div class="path-time">14:04:52</div>
+              <div class="path-num">4</div>
+              <h3>Termin gebucht</h3>
+              <p>Ausgehender Anruf zum Bestätigen, Planen und Erinnern.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WALKTHROUGH -->
+      <section class="section" id="walkthrough">
+        <div class="container">
+          <p class="eyebrow">Walkthrough</p>
+          <h2 class="section-title">Sieh zu, wie aus einem Lead ein Kunde wird</h2>
+          <p class="section-sub">
+            Der genaue Ablauf aus dem Routing-Pfad oben, komplett aufgezeichnet — Formular, CRM-Eintrag, erste automatische Nachricht.
+          </p>
+
+          <div class="demo-frame">
+            <div class="demo-frame-head">
+              <span class="board-dot"></span>
+              <span>walkthrough.mp4</span>
+            </div>
+            <div class="demo-frame-body">
+              <button
+                type="button"
+                class="demo-play"
+                aria-label="Walkthrough-Video abspielen"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="22"
+                  height="22"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+              <p class="demo-placeholder-label">
+                Vollständiger Walkthrough — folgt in Kürze
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section class="section section-raised" id="stack">
+        <div class="container">
+          <p class="eyebrow">Verbundene Systeme</p>
+          <h2 class="section-title">Gebaut auf Tools, denen du schon vertraust</h2>
+          <p class="section-sub">
+            Keine Black Boxes. Ich arbeite in den Plattformen, die du bereits nutzt — damit du die Kontrolle behältst.
+          </p>
+
+          <div class="stack-groups">
+            <div class="stack-group">
+              <p class="stack-group-label">CRM &amp; Leads</p>
+              <div class="stack-grid">
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/hubspot.png" alt="HubSpot"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/pipedrive.png" alt="Pipedrive"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/gohighlevel.png" alt="GoHighLevel"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/close-crm.png" alt="Close CRM"
+                /></span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-group-label">Terminplanung</p>
+              <div class="stack-grid">
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/cal-com.png" alt="Cal.com"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/calendly.png" alt="Calendly"
+                /></span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-group-label">Automatisierung</p>
+              <div class="stack-grid">
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/n8n.png" alt="n8n"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/zapier.png" alt="Zapier"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/make.png" alt="Make"
+                /></span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-group-label">Chat</p>
+              <div class="stack-grid">
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/manychat.png" alt="ManyChat"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/superchat.png" alt="Superchat"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/whatsapp.png" alt="WhatsApp"
+                /></span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-group-label">Voice AI</p>
+              <div class="stack-grid">
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/fonio.png" alt="Fonio"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/vapi.png" alt="VAPI"
+                /></span>
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/twilio.png" alt="Twilio"
+                /></span>
+              </div>
+            </div>
+            <div class="stack-group">
+              <p class="stack-group-label">Werbung</p>
+              <div class="stack-grid">
+                <span class="stamp stamp-logo"
+                  ><img src="../assets/meta-ads.png" alt="Meta Ads"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <p class="fine-print">
+            Plus individuelle Integrationen, wo immer dein Unternehmen sie braucht.
+          </p>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS / CONFIRMED -->
+      <section class="section" id="ergebnisse">
+        <div class="container">
+          <p class="eyebrow">Bestätigt</p>
+          <h2 class="section-title">Was Kunden sagen</h2>
+
+          <div class="grid grid-3 transmission-grid">
+            <div class="transmission">
+              <div class="transmission-head">
+                <span class="transmission-tag">ERHALTEN</span>
+              </div>
+              <p class="transmission-quote">
+                „[Kurzes Zitat dieses Kunden über die erzielten Ergebnisse]“
+              </p>
+              <div class="transmission-author">
+                <span class="transmission-logo">A</span>
+                <div>
+                  <h4>Kundenname</h4>
+                  <p>Unternehmen / Branche</p>
+                </div>
+              </div>
+            </div>
+            <div class="transmission">
+              <div class="transmission-head">
+                <span class="transmission-tag">ERHALTEN</span>
+              </div>
+              <p class="transmission-quote">
+                „[Kurzes Zitat dieses Kunden über die erzielten Ergebnisse]“
+              </p>
+              <div class="transmission-author">
+                <span class="transmission-logo">B</span>
+                <div>
+                  <h4>Kundenname</h4>
+                  <p>Unternehmen / Branche</p>
+                </div>
+              </div>
+            </div>
+            <div class="transmission">
+              <div class="transmission-head">
+                <span class="transmission-tag">ERHALTEN</span>
+              </div>
+              <p class="transmission-quote">
+                „[Kurzes Zitat dieses Kunden über die erzielten Ergebnisse]“
+              </p>
+              <div class="transmission-author">
+                <span class="transmission-logo">C</span>
+                <div>
+                  <h4>Kundenname</h4>
+                  <p>Unternehmen / Branche</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="fine-print">
+            Platzhalter-Testimonials — vor dem Teilen mit Interessenten durch echte Kundenzitate und Logos ersetzen.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section section-raised" id="ueber-mich">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="eyebrow">Über mich</p>
+            <h2 class="section-title">Konzern-Schule. Startup-Tempo.</h2>
+            <p>
+              Ich bin Lars. Bevor ich KI-Systeme gebaut habe, habe ich drei Jahre im operativen Geschäft von Amazon verbracht — fünf Rotationen über Retail Finance, Product Management und Vendor Management — danach Finance-Transformation-Beratung bei PwC, Prüfung bei KPMG und M&amp;A bei DealCircle. Dort habe ich gelernt, wie Unternehmen tatsächlich funktionieren und wo der Prozess meistens bricht.
+            </p>
+            <p>
+              Später habe ich KI-Automatisierung und Voice-Agenten bei
+              <strong>AI Union</strong> &amp; <strong>SalesFrank</strong> aufgebaut — praktische Erfahrung mit echten Kundensystemen, nicht nur Theorie. Heute arbeite ich selbstständig als freiberuflicher KI-Automatisierungsberater und helfe Unternehmen in Europa und darüber hinaus, aus ihren Leads Kunden zu machen. Ich habe einen Master in Management &amp; Finance der Universität Münster, mit Auslandssemestern an der Fudan University (Shanghai) und der Lingnan University (Hongkong).
+            </p>
+            <div class="about-langs">
+              <span>Deutsch — Muttersprache</span>
+              <span>Englisch — verhandlungssicher</span>
+              <span>Französisch — B2</span>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="about-photo">
+              <img
+                src="../assets/lars.jpg"
+                alt="Porträt von Lars Timmermann"
+                width="400"
+                height="400"
+              />
+            </div>
+            <div class="about-logos">
+              <p class="about-logos-label">Berufserfahrung</p>
+              <div class="logo-row">
+                <img src="../assets/amazon.png" alt="Amazon" class="logo-amazon" />
+                <img src="../assets/pwc.png" alt="PwC" class="logo-pwc" />
+                <img src="../assets/kpmg.png" alt="KPMG" class="logo-kpmg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact-section" id="kontakt">
+        <div class="container contact-inner">
+          <p class="eyebrow">Kontakt aufnehmen</p>
+          <h2 class="section-title">Lass uns über deine Leads sprechen</h2>
+          <p class="section-sub">
+            Am schnellsten erreichst du mich per WhatsApp. Oder buche unten direkt einen Anruf.
+          </p>
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/4915679771598"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary btn-lg"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.004c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.003a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.25 8.21z"
+                />
+              </svg>
+              +49 156 7977 1598
+            </a>
+            <a
+              href="mailto:lars.timmermann.ai@gmail.com"
+              class="btn btn-ghost btn-lg"
+              >lars.timmermann.ai@gmail.com</a
+            >
+            <a
+              href="https://www.linkedin.com/in/lars-timmermann-428841194/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-ghost btn-lg"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+          <div class="contact-calendly">
+            <a
+              href="https://cal.com/lars-timmermann-lt00/free-intro-call"
+              class="btn btn-calendly btn-lg"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M3 10h18M8 3v4M16 3v4" />
+              </svg>
+              Kostenloses Kennenlerngespräch buchen
+            </a>
+            <p class="contact-calendly-note">30 Min. · Kostenlos · Unverbindlich.</p>
+          </div>
+          <p class="status-line">
+            <span class="status-dot"></span> STATUS: NEHME NEUE ANFRAGEN AN
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="nav-brand-name">Lars Timmermann</span>
+          <span class="nav-brand-tag">KI-Automatisierung</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer-Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#stack">Stack</a>
+          <a href="#ergebnisse">Ergebnisse</a>
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+        <div class="footer-contact">
+          <a href="https://wa.me/4915679771598" target="_blank" rel="noopener"
+            >WhatsApp</a
+          >
+          <a href="mailto:lars.timmermann.ai@gmail.com">E-Mail</a>
+          <a
+            href="https://www.linkedin.com/in/lars-timmermann-428841194/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © <span id="year"></span> Lars Timmermann. Sitz in Deutschland, Arbeit mit Kunden weltweit.
+        </p>
+      </div>
+    </footer>
+
+    <!-- PILLAR DETAIL MODALS -->
+    <div class="modal-overlay" id="modal-lead" aria-hidden="true">
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-lead-title"
+      >
+        <button type="button" class="modal-close" data-close aria-label="Schließen">
+          ×
+        </button>
+        <span class="modal-eyebrow">Manifest · Routing</span>
+        <h3 id="modal-lead-title">Lead-Management &amp; CRM-Funnels</h3>
+        <p class="modal-intro">
+          Das System, das die meisten Kunden zuerst brauchen. Jeder Lead — egal woher er kommt — landet an einer Stelle, wird erfasst und automatisch nachverfolgt, bis er bucht oder klar disqualifiziert ist.
+        </p>
+        <div class="modal-flow">
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">1</span>
+            <div>
+              <h4>Lead kommt rein</h4>
+              <p>
+                Aus Anzeigen, Formularen, DMs oder Anrufen — jeder Kanal, den du schon nutzt.
+              </p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">2</span>
+            <div>
+              <h4>Automatisch im CRM erfasst</h4>
+              <p>Angelegt, getaggt und dedupliziert — keine manuelle Dateneingabe.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">3</span>
+            <div>
+              <h4>Nurture-Sequenz startet</h4>
+              <p>
+                Automatische Follow-ups halten das Gespräch am Laufen, bis der Lead antwortet.
+              </p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">4</span>
+            <div>
+              <h4>Heiße Leads werden für dich markiert</h4>
+              <p>
+                Du investierst Zeit nur dort, wo ein Abschluss wirklich bereit ist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-chat" aria-hidden="true">
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-chat-title"
+      >
+        <button type="button" class="modal-close" data-close aria-label="Schließen">
+          ×
+        </button>
+        <span class="modal-eyebrow">Manifest · Eingang</span>
+        <h3 id="modal-chat-title">Chat-Automatisierung</h3>
+        <p class="modal-intro">
+          Sofortige Antworten rund um die Uhr auf den Kanälen, auf denen dich deine Kunden schon anschreiben — ohne jemanden einzustellen, der am Postfach sitzt.
+        </p>
+        <div class="modal-flow">
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">1</span>
+            <div>
+              <h4>Nachricht kommt rein</h4>
+              <p>WhatsApp, Instagram-DM oder dein Website-Chat.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">2</span>
+            <div>
+              <h4>KI erkennt die Absicht</h4>
+              <p>
+                Frage, Beschwerde oder Verkaufsanfrage — in Echtzeit klassifiziert.
+              </p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">3</span>
+            <div>
+              <h4>Antwortet sofort</h4>
+              <p>Auf Basis deiner FAQs und Wissensbasis, in deinem Tonfall.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">4</span>
+            <div>
+              <h4>Qualifizierte Leads werden übergeben</h4>
+              <p>Direkt ins CRM oder direkt in deinen Kalender gebucht.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-voice" aria-hidden="true">
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-voice-title"
+      >
+        <button type="button" class="modal-close" data-close aria-label="Schließen">
+          ×
+        </button>
+        <span class="modal-eyebrow">Manifest · Voice</span>
+        <h3 id="modal-voice-title">Voice AI — eingehend &amp; ausgehend</h3>
+        <p class="modal-intro">
+          Ein natürlich klingender KI-Sprachagent, der Anrufe annimmt oder tätigt — in einem Maßstab, den kein Callcenter erreicht.
+        </p>
+        <div class="modal-flow">
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">1</span>
+            <div>
+              <h4>Eingehend: Anruf kommt rein</h4>
+              <p>KI nimmt sofort ab, prüft Identität oder Bestelldetails.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">2</span>
+            <div>
+              <h4>Löst oder übergibt</h4>
+              <p>
+                Beantwortet Routinefragen live, eskaliert komplexe Fälle an dich.
+              </p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">3</span>
+            <div>
+              <h4>Ausgehend: Lead als bereit markiert</h4>
+              <p>KI ruft an, um zu qualifizieren, Interesse zu bestätigen oder einen Termin zu buchen.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">4</span>
+            <div>
+              <h4>Bestätigung &amp; Erinnerungen</h4>
+              <p>Automatisch versendet, damit No-Shows ohne Zusatzaufwand sinken.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-website" aria-hidden="true">
+      <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-website-title"
+      >
+        <button type="button" class="modal-close" data-close aria-label="Schließen">
+          ×
+        </button>
+        <span class="modal-eyebrow">Manifest · Build</span>
+        <h3 id="modal-website-title">Website-Erstellung</h3>
+        <p class="modal-intro">
+          Eine schnelle, professionelle Website — gebaut mit demselben KI-beschleunigten Workflow wie diese Seite, in Tagen fertig.
+        </p>
+        <div class="modal-flow">
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">1</span>
+            <div>
+              <h4>Kurzes Briefing</h4>
+              <p>Ziele, Leistungen, Markenrichtung — ein kurzes Gespräch.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">2</span>
+            <div>
+              <h4>KI-beschleunigter Aufbau</h4>
+              <p>
+                Struktur, Texte und Design entstehen in Tagen, nicht Monaten.
+              </p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">3</span>
+            <div>
+              <h4>Prüfen &amp; verfeinern</h4>
+              <p>Du prüfst, ich poliere — schnelle Umsetzung von Änderungen.</p>
+            </div>
+          </div>
+          <div class="modal-flow-step">
+            <span class="modal-flow-num">4</span>
+            <div>
+              <h4>Launch</h4>
+              <p>Live, mobiloptimiert und bereit für deinen QR-Code oder deine Anzeigen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
